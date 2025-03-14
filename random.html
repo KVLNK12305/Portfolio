@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="r2.css">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/835cdeafad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul id="menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" id="cls"onclick="hide()"></i>
+                </ul>
+                <i class="fa-solid fa-bars fa-bounce" id="open" onclick="show()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Coder, Student</p>
+                <span class="typing-text"></span>
+                <br>
+            </div>
+        </div>
+    </div>
+<!--  ----------- about ------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col2">
+                    <h1 class="sub-title"><span>About Me</span></h1>
+                    <p style="font-size: 25px;">I'm a student who believes in smart— work since hardwork without direction is just cardio. I pursue a strategic approach, exploring multiple sources to craft well-informed solutions. Perfection isn’t my goal; delivering high-quality work and improving with every step is.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span style="font-size: 30px;">UI/UX</span><br>Designing Web interfaces</li>
+                            <li><span style="font-size: 30px;">Coder</span><br>Object-Oriented Programming:<br>Python,Java</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span style="font-size: 30px;">2023</span><br>OCT-NOV → Intern with corizo as a web developer</li>
+                            <li><span style="font-size: 30px;">Further More</span><br>Very Soon..</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span style="font-size: 30px;">2023-2027</span><br>Amrita Vishwa Vidyapeetham</li>
+                            <li><span style="font-size: 30px;">2021</span><br>Allen Career Institute</li>
+                            <li><span style="font-size: 30px;">2018-2021</span><br>Narayana E.M HIgh School</li>
+                            <li><span style="font-size: 30px;">2017</span><br>Sai Baba Central School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------Services----------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title"><span>Field of Expertise</span></h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>Web Design</h2>
+                    <p id="history">HTML5 structures content for accessibility and SEO. CSS3 styles elements for a visually appealing experience. JavaScript adds interactivity and dynamic behavior. Together, they enable modern, responsive web design.</p>
+                    <a style="font-size: 20px;" href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>OOP code</h2>
+                    <p id="history">OOP structures programs around objects using classes. It emphasizes encapsulation (hiding data), inheritance (code reuse), and polymorphism (flexible object handling) for efficient, modular development.</p>
+                    <a style="font-size: 20px;" href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Data Structures and Algorithms</h2>
+                    <p id="history">Data Structures and Algorithms (DSA) are the foundation of efficient programming, enabling developers to write optimized and scalable code. By mastering DSA, one can solve complex problems methodically, improve system performance, and excel in technical interviews, making it an essential skill for any aspiring software engineer.</p>
+                    <a style="font-size: 20px;" href="https://www.geeksforgeeks.org/dsa-tutorial-learn-data-structures-and-algorithms/">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Operating Systems</h2>
+                    <p id="history">OOP structures programs around objects using classes. It emphasizes encapsulation (hiding data), inheritance (code reuse), and polymorphism (flexible object handling) for efficient, modular development.</p>
+                    <a style="font-size: 20px;" href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"><span>My Projects</span></h1>
+            <div class="worklist">
+                <div class="work"><img src="" alt=""><div class="layer"><h3>LuxeRide rentals</h3></div></div>
+                <div class="work"><img src="" alt=""></div>
+            </div>
+            <a href="" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title" style="font-family: myFont;">Contact Me</h1>
+                    <p> <i class="fa-sharp fa-solid fa-paper-plane"></i> kls2edmentre@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/narasimha-kushal-kurapati-v-l-729ab4289/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/kvlnkushal_2305/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://twitter.com/KushalKurapati" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/kushal.kurapati.5/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        <textarea name="message" id="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="mg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © KLS2.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const text = "Hi, I am Narasimha from India";
+        const highlightWord = "Narasimha"; // Word to highlight
+        let index = 0;
+        const typingTextElement = document.querySelector(".typing-text");
+
+        function type() {
+            if (index <= text.length) {
+                let displayedText = text.substring(0, index);
+                
+                // Apply highlight styling when "Narasimha" appears
+                displayedText = displayedText.replace(highlightWord, `<span class="highlight">${highlightWord}</span>`);
+
+                typingTextElement.innerHTML = displayedText;
+                index++;
+                setTimeout(type, 100); // Adjust speed here
+            }
+        }
+
+        typingTextElement.innerHTML = ""; // Ensure it starts empty
+        type();
+    });
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var meu=document.getElementById("menu") 
+        function show(){
+            meu.style.right="0";
+        }
+        function hide(){
+            meu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = ''
+        const form = document.forms['submit-to-google-sheet']
+        const mg = document.getElementById('mg')
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                mg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    mg.innerHTML = ""
+                },3000)
+                form.reset()
+                })
+            })
+            .catch(error => console.error('Error!', error.message))
+      </script>
+      
+</body>
+</html>
