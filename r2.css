@@ -256,6 +256,89 @@ span {
     color: #262626;
 }
 
+/* Expertise Ruler Styles */
+.expertise-ruler {
+    position: relative;
+    margin: 40px 0;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.ruler-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgb(23, 238, 177);
+    transform: translateY(-50%);
+}
+
+.ruler-markers {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.marker {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.marker:hover {
+    transform: translateY(-5px);
+}
+
+.marker-dot {
+    width: 16px;
+    height: 16px;
+    background-color: rgb(23, 238, 177);
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid rgb(1, 2, 27);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(23, 238, 177, 0.5);
+    transition: all 0.3s ease;
+}
+
+.marker:hover .marker-dot {
+    transform: scale(1.3);
+    box-shadow: 0 0 15px rgba(23, 238, 177, 0.8);
+}
+
+.marker-label {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.marker:hover .marker-label {
+    color: rgb(23, 238, 177);
+}
+
+/* Responsive adjustments for the ruler */
+@media only screen and (max-width: 768px) {
+    .ruler-markers {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .ruler-line {
+        display: none; /* Hide line on mobile */
+    }
+    
+    .marker {
+        margin: 10px 20px;
+    }
+}
 /*----------------portfolio---------------------*/
 #portfolio{
     padding: 50px 0;
@@ -467,4 +550,203 @@ form .btn2{
 }
 #history{
     font-size: 20px;
+}
+
+/* LeetCode color variables */
+:root {
+    --leetcode-orange: #f89f1b;
+    --leetcode-dark: #282828;
+    --leetcode-gray: #3e3e3e;
+    --leetcode-light-gray: #f7f7f7;
+    --leetcode-white: #ffffff;
+    --leetcode-green: #00b8a3;
+    --leetcode-easy: #00af9b;    /* Green for easy problems */
+    --leetcode-medium: #ffb800;  /* Yellow/amber for medium problems */
+    --leetcode-hard: #ef4743;    /* Red for hard problems */
+}
+  
+/* LeetCode-style container */
+#leetcode {
+  max-width: 480px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  background-color: var(--leetcode-white);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  border: 1px solid #e8e8e8;
+}
+
+/* Heading styling - LeetCode-like */
+#leetcode-head {
+  color: var(--leetcode-dark);
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+#leetcode-head::before {
+  content: "";
+  height: 14px;
+  width: 5px;
+  background-color: var(--leetcode-orange);
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+/* Stats styling to match LeetCode */
+#leetcode-rank, 
+#leetcode-total-solved, 
+#leetcode-acceptance-rate,
+#leetcode-problem-count {
+  margin: 12px 0;
+  color: var(--leetcode-gray);
+  font-size: 14px;
+  padding: 10px;
+  background-color: var(--leetcode-light-gray);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+}
+
+/* Data value styling */
+#leetcode-rank span, 
+#leetcode-total-solved span, 
+#leetcode-acceptance-rate span,
+#leetcode-problem-count span {
+  color: var(--leetcode-dark);
+  font-weight: 500;
+}
+
+/* Icons for each stat - LeetCode style */
+#leetcode-rank::after,
+#leetcode-total-solved::after,
+#leetcode-acceptance-rate::after,
+#leetcode-problem-count::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+#leetcode-rank::after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23f89f1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>');
+}
+
+#leetcode-total-solved::after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2300b8a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>');
+}
+
+#leetcode-acceptance-rate::after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%233e3e3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>');
+}
+
+#leetcode-problem-count::after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%233e3e3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><path d="M6 8h.01"></path><path d="M10 8h8"></path><path d="M6 12h.01"></path><path d="M10 12h8"></path><path d="M6 16h.01"></path><path d="M10 16h8"></path></svg>');
+}
+
+/* Loading state - LeetCode style */
+#leetcode-rank:contains("Loading..."),
+#leetcode-total-solved:contains("Loading..."),
+#leetcode-acceptance-rate:contains("Loading..."),
+#leetcode-problem-count:contains("Loading...") {
+  color: #9e9e9e;
+  background-color: #f3f3f3;
+}
+
+#leetcode-rank:contains("Loading...")::after,
+#leetcode-total-solved:contains("Loading...")::after,
+#leetcode-acceptance-rate:contains("Loading...")::after,
+#leetcode-problem-count:contains("Loading...")::after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%239e9e9e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="12" y1="12" x2="16" y2="14"/></svg>');
+  animation: spin 1.5s linear infinite;
+}
+
+/* Problem difficulty categories */
+#leetcode-difficulty-categories {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.leetcode-difficulty-category {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  color: var(--leetcode-white);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.leetcode-difficulty-label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.leetcode-difficulty-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#leetcode-easy {
+  background-color: var(--leetcode-easy);
+}
+
+#leetcode-medium {
+  background-color: var(--leetcode-medium);
+}
+
+#leetcode-hard {
+  background-color: var(--leetcode-hard);
+}
+
+/* Profile link - LeetCode style */
+#leetcode-profile {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  color: var(--leetcode-white);
+  background-color: var(--leetcode-orange);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+#leetcode-profile:hover {
+  background-color: #e08800;
+}
+
+/* Animation for loading indicator */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Media query for small screens */
+@media (max-width: 480px) {
+  #leetcode {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  #leetcode-difficulty-categories {
+    flex-direction: column;
+    gap: 6px;
+  }
 }
